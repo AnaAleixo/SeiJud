@@ -7,7 +7,7 @@ function AlunoDetailPage() {
   const navigate = useNavigate();
 
   const [showForm, setShowForm] = useState(false);
-  const [showForm2, setShowForm2] = useState(true);
+ 
 
   const [reload, setReload] = useState(false);
   const [aluno, setAluno] = useState({});
@@ -31,7 +31,7 @@ function AlunoDetailPage() {
     }
 
     fetchUser();
-  }, [reload]);
+  }, [reload, alunoID]);
 
   async function handleDelete(e) {
     await axios.delete(`https://ironrest.cyclic.app/sei-jud/${alunoID}`);

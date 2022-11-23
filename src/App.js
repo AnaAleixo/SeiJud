@@ -2,9 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import { useState } from "react";
 import projects from "./projects.json";
 import ApiTeste from "./pages/ApiTeste";
@@ -21,16 +19,12 @@ function App() {
       <Toaster />
 
       <Routes>
-        <Route path="/" element={<HomePage allProjects={allProjects} />} />
+        <Route path="/" element={<HomePage allProjects={allProjects} setAllProjects={setAllProjects}
+ />} />
 
         <Route path="/about" element={<AboutPage />} />
 
-        <Route path="*" element={<ErrorPage />} />
 
-        <Route
-          path="/projects/:projectID"
-          element={<ProjectDetailsPage allProjects={allProjects} />}
-        />
 
         <Route path="/api-teste" element={<ApiTeste />} />
 
