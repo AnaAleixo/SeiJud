@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 function AboutPage() {
   return (
     <div>
-      <h1>SITE DE ACOMPANHAMENTO DOS PROJETOS DA ADM PREDIAL</h1>
+      <h1>PÁGINA DE ACOMPANHAMENTO DOS PROJETOS DA ADM PREDIAL</h1>
 
       <h1>
       Os processos acompanhados neste site, referem-se aos projetos do 
