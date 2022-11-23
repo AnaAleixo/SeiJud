@@ -17,13 +17,6 @@ function ApiTeste() {
     descricao: "",
   });
 
-  //fetch -> api do navegador -> requisições http (get, put, pacth, delete, post) -> axios
-  //promisses -> async/await
-
-  //useEffect()
-  // array de dependencias
-  // [] -> vai rodar APENAS uma vez -> quando o componente/pagina for carregado
-  // [state] -> toda vez que esse state MUDAR DE VALOR -> o código dentro do useEffect roda novamente.
 
   useEffect(() => {
     async function fetchStudents() {
@@ -37,8 +30,7 @@ function ApiTeste() {
   }, [reload]);
 
   function handleReload() {
-    // reload = false ----> ! => true
-    // reload = true -----> ! => false
+    
     setReload(!reload);
   }
 
@@ -141,7 +133,7 @@ function ApiTeste() {
 
       <button onClick={handleReload}>Recarregar Página</button>
 
-      {alunos.length > 14 && <p>Arquivo tem 06 processos</p>}
+      {alunos.length > 14 && <p>Arquivo tem 08 processos</p>}
 
       <div className="cards">
         {alunos.map((aluno) => {

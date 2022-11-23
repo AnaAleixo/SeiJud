@@ -26,7 +26,7 @@ function AlunoDetailPage() {
         `https://ironrest.cyclic.app/sei-jud/${alunoID}`
       );
       setAluno(response.data);
-      //preenchendo o form com as informações existentes
+    
       setForm(response.data);
     }
 
@@ -46,9 +46,9 @@ function AlunoDetailPage() {
     e.preventDefault();
 
     try {
-      //clonar o state para um obj JS
+   
       const clone = { ...form };
-      //deletar a chave _id do obj
+    
       delete clone._id;
 
       await axios.put(
